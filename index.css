@@ -119,6 +119,43 @@ h3 {
   height: auto;
 }
 
+/* Carrousel */
+.layout-carrousel {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.carrossel {
+  grid-column: 2;
+  width: 800px;
+  overflow: hidden;
+  position: relative;
+}
+
+.slides {
+  display: flex;
+  width: 300%;
+  animation: slide 40s infinite linear;
+}
+
+.slides img {
+  width: 100%;
+}
+
+@keyframes slide {
+  0% {
+    margin-left: 0;
+  }
+  30% {
+    margin-left: -100%;
+  }
+  60% {
+    margin-left: -200%;
+  }
+  100% {
+    margin-left: 0;
+  }
+}
 
 /* ==== RESPONSIVIDADE ==== */
 
@@ -168,6 +205,10 @@ h3 {
   header > section > a {
     font-size: 0.9rem;
   }
+
+  .carrossel {
+    width: 500px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -188,4 +229,9 @@ h3 {
     grid-column: 1;
     height: 250px;
   }
+
+  .carrossel {
+    width: 300px;
+  }
 }
+
